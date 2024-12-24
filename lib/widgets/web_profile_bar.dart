@@ -9,7 +9,7 @@ class WebProfileBar extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.all(10),
       width: double.infinity,
-      height: MediaQuery.of(context).size.height * 0.077,
+      height: MediaQuery.of(context).size.height * 0.09,
       decoration: const BoxDecoration(
         border: Border(
           right: BorderSide(
