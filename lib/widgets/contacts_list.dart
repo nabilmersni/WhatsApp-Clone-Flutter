@@ -14,16 +14,17 @@ class ContactsList extends StatelessWidget {
         itemCount: info.length,
         itemBuilder: (context, index) {
           final item = info[index];
-          return InkWell(
-            onTap: () {},
-            child: Padding(
-              padding: const EdgeInsets.only(bottom: 8.0),
-              child: Column(
-                children: [
-                  ListTile(
+          return Column(
+            children: [
+              InkWell(
+                onTap: () {},
+                child: Padding(
+                  padding: const EdgeInsets.only(bottom: 8.0),
+                  child: ListTile(
                     leading: CircleAvatar(
                       backgroundImage:
                           NetworkImage(item["profilePic"].toString()),
+                      radius: 30,
                     ),
                     title: Text(
                       item["name"].toString(),
@@ -48,13 +49,13 @@ class ContactsList extends StatelessWidget {
                       ),
                     ),
                   ),
-                  const Divider(
-                    color: dividerColor,
-                    indent: 85,
-                  ),
-                ],
+                ),
               ),
-            ),
+              const Divider(
+                color: dividerColor,
+                indent: 85,
+              ),
+            ],
           );
         },
       ),
